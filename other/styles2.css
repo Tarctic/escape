@@ -1,0 +1,184 @@
+body {
+    max-width: 100%;
+    /* overflow-y: hidden;
+    overflow-x: hidden; */
+}
+
+/* backgrounds */
+
+.bg1{
+    background: white url('images/p1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:500px;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* divs */
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+/* buttons */
+
+.btn1{
+    border-radius: 1px;
+    position: relative;
+    height: 40px;
+    width: 80px;
+    top: -850px;
+    left: 350px;
+    border: 1px grey solid;
+    background-color: white;
+}
+
+.keybtn{
+    border: none;
+    background: transparent;
+    position: relative;
+    left: 250px;
+    top: -500px;
+}
+.ckbtn{
+    border: none;
+    background: transparent;
+    position: relative;
+    left: 250px;
+    top: -500px;
+}
+
+/* text boxes */
+
+.text{
+    border: black solid 1px;
+    width: 150px;
+    position: relative;
+    padding-left: 5px;
+}
+
+.text1{
+    top: -1100px;
+    left: 520px;
+}
+
+
+/* images */
+
+.cookie{
+    background-image: url('images/cookie.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 20px;
+}
+
+.door1{
+    background-image: url('images/door1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 918px;
+    top: 520px;
+    height: 300px;
+}
+
+.door2{
+    background-image: url('images/door2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 220px;
+    top: -680px;
+    height: 300px;
+}
+
+.clock{
+    background-image: url('images/clock.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 380px;
+    top: -1040px;
+    height: 100px;
+}
+
+.mc{
+    background-image: url('images/mc.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 150px;
+    position: relative;
+    left: 500px;
+    top: -780px;
+}
+
+.dustbin{
+    background-image: url('images/dustbin.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 600px;
+    top: -550px;
+}
+
+
+/* inventory */
+.inv{
+    border: black solid 1px;
+    width: 515px;
+    height: 65px;
+    position: relative;
+    margin: 0 auto;
+    padding: 5px;
+    top: 430px;
+}
+.inv-box{
+    border: black solid 1px;
+    width: 50px;
+    margin: 3px;
+}
+.cookinv{
+    background-image: url('images/cookie.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+}
+.keyinv{
+    background-image: url('images/key.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+}
+
+
+/* Panel 2 */
+
+/* bg */
+.bg2{
+    background-image: white url('https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:500px;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.paint{
+    background-image: url('images/painting.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 80px;
+    top: -50px;
+    height: 100px;
+}

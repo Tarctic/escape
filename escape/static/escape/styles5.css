@@ -1,19 +1,24 @@
 body {
     max-width: 100%;
     background-color: rgb(73, 72, 72);
-    /* overflow-y: hidden;
-    overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 /*start*/
+
+.bg{
+    position: absolute;
+    height: 500px;
+    width: 800px;
+    margin: 0 auto;
+}
+
 .startbg{
     background: url('images/start.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 500px;
     width: 800px;
-    margin: 0 auto;
-    margin-top: 20px;
 }
 
 .center{
@@ -37,40 +42,28 @@ body {
     background: url('images/p1.png');
     background-size: contain;
     background-repeat: no-repeat;
-    height:500px;
-    width: 800px;
-    margin: 0 auto;
-    margin-top: 20px;
 }
 
 /* divs */
 
 .main{
-    width: 100%;
-    height: 100%;
     position: relative;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
-/* buttons */
-
-.start{
-    border-radius: 1px;
-    position: absolute;
-    height: 40px;
-    width: 80px;
-    top: 250px;
-    left: 350px;
-    border: 1px grey solid;
-    background-color: white;
-}
 
 /* text boxes */
 
 .text{
     border: black solid 1px;
+    border-radius: 5px;
     width: 150px;
     position: absolute;
+    background-color:white;
     padding-left: 5px;
+    user-select: none;
 }
 
 .text1{
@@ -145,11 +138,11 @@ body {
     border: black solid 1px;
     width: 515px;
     height: 65px;
-    position: relative;
+    position: absolute;
     margin: 0 auto;
     padding: 5px;
     top: 420px;
-    left: 0px;
+    left: 130px;
     background-color:rgb(138, 137, 137);
 }
 .inv-box{
@@ -186,10 +179,6 @@ body {
     background: url('images/p2.png');
     background-size: contain;
     background-repeat: no-repeat;
-    height:500px;
-    width: 800px;
-    margin: 0 auto;
-    margin-top: 20px;
 }
 
 .mc2{
@@ -261,10 +250,6 @@ body {
     background: url('images/p3.png');
     background-size: contain;
     background-repeat: no-repeat;
-    height:500px;
-    width: 800px;
-    margin: 0 auto;
-    margin-top: 20px;
 }
 
 .left2{
@@ -278,7 +263,7 @@ body {
     background-repeat: no-repeat;
     position: absolute;
     top: 200px;
-    right: 10px;
+    left: 710px;
     height: 50px;
     width: 80px;
 }
@@ -309,50 +294,31 @@ body {
     top: 50px;
     left: 140px;
     width: fit-content;
+    width: -moz-fit-content;
 }
 
 .end{
     background:  url('images/end.gif');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 500px;
-    width: 800px;
-    margin: 0 auto;
-    margin-top: 20px;
 }
 
 .endcard{
     background: url('images/endcard.png');
     background-size: contain;
-    background-repeat: no-repeat;
-    height: 500px;
-    width: 800px;
-    margin: 0 auto;
-    margin-top: 20px;
+    background-repeat: no-repeat;    
 }
 
-
-
-
-
-/* Objects must have:-{
-    background-image: url('images/xxx.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    top: _px;
-    left: _px;
-    height: _px;
-    width: _px;
+.goback{
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    left: 350px;
+    top: 390px;
+    text-decoration: underline;
+    padding: 8px;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
 }
-
-Backgrounds must have:-{
-    background: white url('images/xxx.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 500px;
-    width: 800px;
-    margin: 0 auto;
-    margin-top: 20px;
-}
-*/

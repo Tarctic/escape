@@ -17,12 +17,15 @@ def index(request):
     if request.user.is_authenticated:
         profile = Profile.objects.get(gamer = request.user)
         id = profile.id
+        username = profile.gamer
     else:
         id = -1
+        username = ''
     
 
     return render(request, 'escape/index.html', {
-        'id': id
+        'id': id,
+        'username': username
     })
 
 

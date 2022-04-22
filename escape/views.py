@@ -19,7 +19,7 @@ def index(request):
         id = profile.id
         username = profile.gamer
     else:
-        id = -1
+        id = 0
         username = ''
     
 

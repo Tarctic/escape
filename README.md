@@ -49,6 +49,5 @@ The game also includes a form to submit answer entered by the user in one part o
 The ending displays a GIF with a timeout of 10 seconds matching the end of one loop in the GIF. After the timeout, the GIF is replaced by an image along with a button to go back to main menu.
 
 
-**Additional information:**
-
+#### Additional information:
 Some in-game objects require multiple clicks to respond.

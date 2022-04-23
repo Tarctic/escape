@@ -16,13 +16,13 @@ Escape is neither a social network nor an e-commerce site, but is a site for a p
 
 ### What's contained in each file:
 
-- game.js Main functionality of the game.
-- views.py The background part of saving the game. Sending information back and forth to db and js files.
-- styles.css All the css of the html objects
-- layout.html Template for other html files to borrow from.
-- index.html Main page of the website. Contains the game.
-- login.html Interface for user to login.
-- register.html Interface for user to register.
+- *game.js* - Main functionality of the game.
+- *views.py* - The background part of saving the game. Sending information back and forth to db and js files.
+- *styles.css* - All the css of the html objects
+- *layout.html* - Template for other html files to borrow from.
+- *index.html* - Main page of the website. Contains the game.
+- *login.html* - Interface for user to login.
+- *register.html* - Interface for user to register.
 
 
 ### How to run the application:

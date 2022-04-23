@@ -50,4 +50,5 @@ The ending displays a GIF with a timeout of 10 seconds matching the end of one l
 
 
 **Additional information:**
+
 Some in-game objects require multiple clicks to respond.

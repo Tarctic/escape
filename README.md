@@ -1,8 +1,5 @@
 # escape
 
-CS50w Capstone Project Escape
-
----
 
 ### Introduction:
 

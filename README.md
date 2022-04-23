@@ -1,23 +1,32 @@
 # escape
+
 CS50w Capstone Project Escape
 
-**Introduction:**
+---
+
+### Introduction:
+
 I've been working on the project for quite a while, especially the layered, complex js of the game's functionality. My original plan was to create an elaborate game with subtle clues, and this was only supposed to be a prototype to see if all those elements worked which I planned to include in the main game. However, this ended up taking way more time than expected with university and other courses, and I realized I had to complete it before the time ended (I started CS50w last June!). However, I plan to continue to create the original game at my own pace. If this project fails, I hope I can receive clear feedback, so that I can improve in those areas.
 
-**Distinctiveness and Complexity:**
+
+### Distinctiveness and Complexity:
+
 Escape is neither a social network nor an e-commerce site, but is a site for a particular game of the same name. The main complexity of the website lies in it's JavaScript code, which largely includes the game's functionality. 
 
-**What's contained in each file:** 
--game.js => Main functionality of the game.
--views.py => The background part of saving the game. Sending information back and forth to db and js files.
--styles.css => All the css of the html objects
--layout.html => Template for other html files to borrow from.
--index.html => Main page of the website. Contains the game.
--login.html => Interface for user to login.
--register.html => Interface for user to register.
 
-**How to run the application:**
-Basic: Make sure you have django, react, python installed. From cmd, go into main directory and run 'python manage.py runserver'. In a new browser, go to https://127.0.0.1:8000
+### What's contained in each file:
+
+- game.js Main functionality of the game.
+- views.py The background part of saving the game. Sending information back and forth to db and js files.
+- styles.css All the css of the html objects
+- layout.html Template for other html files to borrow from.
+- index.html Main page of the website. Contains the game.
+- login.html Interface for user to login.
+- register.html Interface for user to register.
+
+
+### How to run the application:
+Basic: Make sure you have django, react, python installed. From cmd, go into main directory and run `python manage.py runserver`. In a new browser, go to https://127.0.0.1:8000
 
 Log in: You can either log in and play or play as an anonymous user. In the case of latter, progress will not be saved. If logged in, you can choose to start a New Game or Continue from where you left off. 
 

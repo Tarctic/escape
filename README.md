@@ -24,11 +24,13 @@ Escape is neither a social network nor an e-commerce site, but is a site for a p
 
 ### How to run the application:
 
-Basic: Make sure you have django, react, python installed. From cmd, go into main directory and run `python manage.py runserver`. In a new browser, go to https://127.0.0.1:8000
+**Walkthrough:** https://www.youtube.com/watch?v=VIXXDsf2XkE
 
-Log in: You can either log in and play or play as an anonymous user. In the case of latter, progress will not be saved. If logged in, you can choose to start a New Game or Continue from where you left off. 
+**Basic:** Make sure you have django, react, python installed. From cmd, go into main directory and run `python manage.py runserver`. In a new browser, go to https://127.0.0.1:8000
 
-Gameplay: On clicking New Game, a room is shown with a stickman kid and some objects. Clicking the dustbin gives you a key which is stored in the inventory at the bottom of the game window. Clicking on the key highlights it, showing that it is currently in use. While the key is highlighted, click on the left door. Stickman is now in a hallway with a painting on the wall, which when clicked moves to show a secret compartment behind it. When the piece of paper in the compartment is clicked, it is stored in the inventory. Clicking on the paper in the inventory reveals its contents, which is a word - 'PGBDYU'. Then, clicking on the left arrow key reveals another portion of the hallway, where a stickman with glasses stands. You cannot move past him without giving him the right answer. When 'PGBDYU' is entered, you are allowed to leave. Game over.
+**Log in:** You can either log in and play or play as an anonymous user. In the case of latter, progress will not be saved. If logged in, you can choose to start a New Game or Continue from where you left off. 
+
+**Gameplay:** On clicking New Game, a room is shown with a stickman kid and some objects. Clicking the dustbin gives you a key which is stored in the inventory at the bottom of the game window. Clicking on the key highlights it, showing that it is currently in use. While the key is highlighted, click on the left door. Stickman is now in a hallway with a painting on the wall, which when clicked moves to show a secret compartment behind it. When the piece of paper in the compartment is clicked, it is stored in the inventory. Clicking on the paper in the inventory reveals its contents, which is a word - 'PGBDYU'. Then, clicking on the left arrow key reveals another portion of the hallway, where a stickman with glasses stands. You cannot move past him without giving him the right answer. When 'PGBDYU' is entered, you are allowed to leave. Game over.
 
 
 #### Detailed working of the game's JS code:

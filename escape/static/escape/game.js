@@ -34,7 +34,7 @@ const Start = ({id, Game, save }) => {
                 <h1><u>How To Play</u></h1>
                 <br></br>
                 <ol className="windowtext">
-                    <li>CLICK ON BUBBLE SPEECHES TO PROCEED</li>
+                    <li>CLICK ON BUBBLE SPEECHES TO PROCEED.</li>
                     <li>SOME OBJECTS ARE STORED IN THE INVENTORY WHEN CLICKED WHILE OTHERS RESPOND. SOME OBJECTS DO NOT RESPOND AT ALL.</li>
                     <li>OBJECTS IN THE INVENTORY ARE HIGHLIGHTED WHEN CLICKED. THIS MEANS THAT THEY ARE CURRENTLY IN USE.</li>
                     <li>ARROWS ARE USED TO MOVE BETWEEN ROOMS OR AREAS.</li>
@@ -48,13 +48,14 @@ const Start = ({id, Game, save }) => {
                 <h1>ABOUT</h1>
                 <br></br>
                 <p className="windowtext">THIS GAME WAS CREATED AS A PROTOTYPE TO TEST THE FEATURES TO IMPLEMENT IN THE GAME I ORIGINALLY HAD IN MIND. BUT I ENDED UP GETTING TOO INVESTED IN TRYING OUT NEW FEATURES AND RAN OUT OF TIME :)</p>
+                <h4>Game created by Tarctic</h4>
                 <button className="backbtn" onClick={() => setWhat('menu')}>BACK</button>
             </div>}
         </div>
     )
 }
 
-const Main = ({ save, saveGame }) => {
+const Main = ({ save, saveGame, START }) => {
 
     // State to set background
     const [bg, setBg] = useState('bg1')
@@ -143,7 +144,7 @@ const Main = ({ save, saveGame }) => {
     // functions to set the right state for each panel (room/area in the game)
     const panel2 = () => {
         setBg('bg2')
-        const newObj = ['inv','left1','mc2','paint',0]
+        const newObj = ['inv','left1','mc2','paint','textp',0]
         setObj(newObj)
     }
     const panel3 = () => {
@@ -219,7 +220,7 @@ const Main = ({ save, saveGame }) => {
     }
 
     return (
-        <div className="main">
+        <div className="outer">
 
             {/* background image (panel) */}
             <div className={`bg ${bg}`}>
@@ -236,9 +237,9 @@ const Main = ({ save, saveGame }) => {
             }
 
             {/* objects */}
-            {obj.includes('door1') && <div className="door1" onClick={() => {if (!speaking) {say("It won't budge")}}}></div>}
+            {obj.includes('door1') && <div className="door1" onClick={() => {if (!speaking) {say("It won't budge.")}}}></div>}
             {obj.includes('door2') && <div className="door2" onClick={() => {if (obj.includes('key')) {panel2();delFromInv('keyinv');saveGame(2)} else {if (!speaking) {say("It's locked... Who would've guessed?")}}}}></div>}
-            {obj.includes('clock') && <div className="clock" onClick={() => {if (!speaking) {say("It's a metaphor for how fast time passes... or it's broken")}}}></div>}
+            {obj.includes('clock') && <div className="clock" onClick={() => {if (!speaking) {say("That clock is fast.")}}}></div>}
             {obj.includes('db') && <div className="dustbin" onClick={() => { if (!speaking && obj.includes('dbclick')) {addToInv('keyinv');delAddObj('dbclick','text');saveGame(1); setText("Of course! The best place to hide a key")}}}></div>}
             {obj.includes('mc1') && <div className="mc mc1"></div>}
             {obj.includes('text1') && <div className="text text1" onClick={() => {delAddObj('text1','text2');}}>I've been trapped here for hours</div>}
@@ -247,8 +248,9 @@ const Main = ({ save, saveGame }) => {
             {obj.includes('text') && <div className="text text1" onClick={() => {setSpeaking(false),delAddObj('text',0)}}>{text}</div>}
             
             {obj.includes('mc2') && <div className="mc mc2"></div>}
+            {obj.includes('textp') && <div className="text textp" onClick={() => {delAddObj('textp',0)}}>Is this what they call modern art?</div>}
             {obj.includes('left1') && <div className="left left1" onClick={() => {if (obj.includes('bigpaper')) {addToInv('paperinv'); saveGame(4)}; panel3(); if (items.includes('paperinv')) {saveGame(4)};}}></div>}
-            {obj.includes('paint') && <div className="paint" onClick={() => {if (!items.includes('paperinv')) {delAddObj('paint','behind')}}}></div>}
+            {obj.includes('paint') && <div className="paint" onClick={() => {if (!items.includes('paperinv') && !obj.includes('bigpaper')) {delAddObj('paint','behind')}}}></div>}
             {obj.includes('behind') && <div className="behind"></div>}
             {obj.includes('behind') && <div className="paper" onClick={() => {delAddObj('behind','paint');addToInv('paperinv');saveGame(3);}}></div>}
             {obj.includes('bigpaper') && <div className="bigpaper" onClick={() => {delAddObj('bigpaper',0),addToInv('paperinv')}}></div>}
@@ -265,7 +267,7 @@ const Main = ({ save, saveGame }) => {
             </form>}
             {obj.includes('goleft') && <div className="text text4" onClick={() => panel4()}>hehe go right ahead...</div>}
             {obj.includes('text6') && <div className="text text4" onClick={() => panel2()}>WRONG CODE! GO BACK!</div>}
-            {obj.includes('goback') && <div className="goback" onClick={() => window.location.reload()}> Main Menu</div>}
+            {obj.includes('goback') && <button className="goback" onClick={() => START()}> Main Menu</button>}
             </div>
         </div>
     )
@@ -313,6 +315,7 @@ function App() {
     
     // function to fetch progress via a get request and then display <Start />
     const START = () => {
+        setMain(false)
         if (id!=0) {
         fetch(`/save/${id}`)
         .then(response => response.json())
@@ -334,14 +337,14 @@ function App() {
 
     return (
         <div>
-            <div className="main">
+            <div className="outer">
                 {!main && start && <div className="startbg">
                     <Start id={id} Game={Game} START={START} save={save} />
                 </div>}
             </div>
-            
+
             {main && <div>
-                <Main save={save} saveGame={saveGame} />
+                <Main save={save} saveGame={saveGame} START={START} />
             </div>}
         </div>
     );

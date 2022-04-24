@@ -8,7 +8,6 @@ class User(AbstractUser):
 
 class Profile(models.Model):
     gamer = models.ForeignKey(User, on_delete=models.CASCADE, related_name="game_user")
-    score = models.IntegerField(default=0, null=True, blank=True)
     progress = models.IntegerField(default=0)
 
     def __str__(self):

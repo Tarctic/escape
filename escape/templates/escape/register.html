@@ -4,7 +4,9 @@
 
 {% block body %}
 
+    <div class="register">
     <h2>Register</h2>
+    <hr>
 
     {% if message %}
         <div>{{ message }}</div>
@@ -24,9 +26,10 @@
         <div class="form-group">
             <input class="form-control" type="password" name="confirmation" placeholder="Confirm Password">
         </div>
-        <input class="btn btn-primary" type="submit" value="register">
+        <input class="btn btn-primary" type="submit" value="Register">
     </form>
-
-    Already have an account? <a href="{% url 'login' %}">Log In here.</a>
+    <br>
+    <span class="ender">Already have an account?</span> <a href="{% url 'login' %}">Log In here.</a>
+    </div>
 
 {% endblock %}

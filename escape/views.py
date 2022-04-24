@@ -14,6 +14,7 @@ from .models import Profile, User
 
 def index(request):
     
+    # getting user id if user is not anonymous
     if request.user.is_authenticated:
         profile = Profile.objects.get(gamer = request.user)
         id = profile.id

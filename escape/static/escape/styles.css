@@ -5,13 +5,7 @@ body {
     text-size-adjust: 100%;
 }
 
-/*start*/
-
-
-.bg1{
-    background: url('images/p1.png');
-}
-
+/* start menu */
 
 .startbg{
     background: url('images/start.png');
@@ -36,98 +30,50 @@ body {
     margin-bottom: 25px;
 }
 
-/* backgrounds */
 
+.window{
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 50px;
+    width: 680px;
+    height: 420px;
+    background-color: rgb(209, 196, 233);
+    border: 4px solid black;
+    padding: 30px;
+    align-items: center;
+}
 
-/* divs */
+.windowtext{
+    font-family: 'VT323', monospace;
+    font-size: larger;
+}
 
-.main{
+.backbtn{
+    position: absolute;
+    top: 340px;
+    left: 560px;
+    background-color: rgb(209, 196, 233);
+    border: solid 2px black;
+    font-size: large;
+    width: 84px;
+    font-family: 'VT323', monospace;
+    height: 40px;
+}
+
+h1, h4{
+    text-align: center;
+    font-family: 'VT323', monospace;
+}
+
+/* common for main and start */
+.outer{
     position: relative;
     width: 60%;
     margin: 0 auto;
     margin-top: 20px;
 }
 
-
-/* text boxes */
-
-.text{
-    border: black solid 1px;
-    border-radius: 5px;
-    width: 150px;
-    position: absolute;
-    background-color:white;
-    padding-left: 5px;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-.text1{
-    top: 110px;
-    left: 520px;
-}
-
-
-/* images */
-
-.door1{
-    background-image: url('images/door1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 718px;
-    top: 136px;
-    height: 300px;
-    width: 50px;
-}
-
-.door2{
-    background-image: url('images/door2.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 20px;
-    top: 138px;
-    height: 300px;
-    width: 50px;
-}
-
-.clock{
-    background-image: url('images/clock.gif');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 160px;
-    top: 70px;
-    height: 100px;
-    width: 100px;
-}
-
-.mc{
-    background-image: url('images/mc.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 140px;
-    position: absolute;
-}
-
-.mc1{
-    left: 500px;
-    top: 130px;
-}
-
-.dustbin{
-    background-image: url('images/dustbin.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 80px;
-    width: 60px;
-    position: absolute;
-    left: 610px;
-    top: 230px;
-}
-
+/* main */
 
 /* inventory */
 .inv{
@@ -167,10 +113,71 @@ body {
     background-color: grey;
 }
 
+/* panel 1 */
+
+.bg1{
+    background: url('images/p1.png');
+}
+
+
+.text1{
+    top: 110px;
+    left: 520px;
+}
+
+.door1{
+    background-image: url('images/door1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 718px;
+    top: 136px;
+    height: 300px;
+    width: 50px;
+}
+
+.door2{
+    background-image: url('images/door2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20px;
+    top: 138px;
+    height: 300px;
+    width: 50px;
+}
+
+.clock{
+    background-image: url('images/clock.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 160px;
+    top: 70px;
+    height: 100px;
+    width: 100px;
+}
+
+
+.mc1{
+    left: 500px;
+    top: 130px;
+}
+
+.dustbin{
+    background-image: url('images/dustbin.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 60px;
+    position: absolute;
+    left: 610px;
+    top: 230px;
+}
+
 
 /* Panel 2 */
 
-/* bg */
 .bg2{
     background: url('images/p2.png');
 }
@@ -178,15 +185,6 @@ body {
 .mc2{
     top: 120px;
     left: 300px;
-}
-
-.left{
-    background-image: url('images/left.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 50px;
-    width: 80px;
 }
 
 .left1{
@@ -205,6 +203,10 @@ body {
     width: 100px;
 }
 
+.textp{
+    top: 90px;
+    left: 280px;
+}
 .behind{
     background-image: url('images/behind.png');
     background-size: contain;
@@ -289,6 +291,8 @@ body {
     width: -moz-fit-content;
 }
 
+/* final panel */
+
 .end{
     background:  url('images/end.gif');
 }
@@ -298,15 +302,16 @@ body {
 }
 
 .goback{
-    border-radius: 5px;
+    border: none;
+    background-color: transparent;
     position: absolute;
     left: 350px;
     top: 390px;
     text-decoration: underline;
     padding: 8px;
-    cursor: pointer;
 }
 
+/* common */
 
 .bg{
     position: absolute;
@@ -317,36 +322,39 @@ body {
     background-repeat: no-repeat;
 }
 
-.window{
+.text{
+    border: black solid 1px;
+    border-radius: 5px;
+    width: 150px;
     position: absolute;
-    margin-top: 45px;
-    margin-left: 50px;
-    width: 680px;
-    height: 420px;
-    background-color: rgb(209, 196, 233);
-    border: 4px solid black;
-    padding: 30px;
-    align-items: center;
+    background-color:white;
+    padding-left: 5px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-.windowtext{
-    font-family: 'VT323', monospace;
-    font-size: larger;
-}
-
-.backbtn{
+.mc{
+    background-image: url('images/mc.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 140px;
     position: absolute;
-    top: 340px;
-    left: 560px;
-    background-color: rgb(209, 196, 233);
-    border: solid 2px black;
-    font-size: large;
-    width: 84px;
-    font-family: 'VT323', monospace;
-    height: 40px;
 }
 
-h1, h4{
-    text-align: center;
-    font-family: 'VT323', monospace;
+.left{
+    background-image: url('images/left.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 50px;
+    width: 80px;
+}
+
+.login, .register{
+    margin: 30px;
+}
+
+h2, .ender{
+    color: white
 }

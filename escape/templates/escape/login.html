@@ -2,7 +2,9 @@
 
 {% block body %}
 
+    <div class="login">
     <h2>Login</h2>
+    <hr>
 
     {% if message %}
         <div>{{ message }}</div>
@@ -19,6 +21,9 @@
         <input class="btn btn-primary" type="submit" value="Login">
     </form>
 
-    Don't have an account? <a href="{% url 'register' %}">Register here.</a>
+    <br>
+
+    <span class="ender">Don't have an account?</span> <a href="{% url 'register' %}">Register here.</a>
+    </div>
 
 {% endblock %}

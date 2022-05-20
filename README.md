@@ -14,7 +14,7 @@ I've been working on the project for quite a while, especially the layered, comp
 
     Main functionality of the game.
 
-    Contains nearly all the code of the game's working. [Full description](https://github.com/Tarctic/escape/edit/main/#detailed-working-of-the-games-js-code) is given below.
+    Contains nearly all the code of the game's working. [Full description](https://github.com/Tarctic/escape/blob/main/README.md#detailed-working-of-the-games-js-code) is given below.
 
 #### Python files:
 - *views.py*:

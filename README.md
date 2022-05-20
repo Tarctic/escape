@@ -13,13 +13,64 @@ Escape is neither a social network nor an e-commerce site, but is a site for a p
 
 ### What's contained in each file:
 
-- *game.js* - Main functionality of the game.
-- *views.py* - The background part of saving the game. Sending information back and forth to db and js files.
-- *styles.css* - All the css of the html objects
-- *layout.html* - Template for other html files to borrow from.
-- *index.html* - Main page of the website. Contains the game.
-- *login.html* - Interface for user to login.
-- *register.html* - Interface for user to register.
+#### JS files:
+- *game.js*:
+
+    Main functionality of the game.
+
+    Contains nearly all the code of the game's working. [Full description](https://github.com/me50/Tarctic/edit/web50/projects/2020/x/capstone/README.md#detailed-working-of-the-games-js-code) is given below.
+
+#### Python files:
+- *views.py*:
+
+    The background part of saving the game. Sends information back and forth to db and js files.
+
+    Contains five views:
+    1. index: Loads the main page along id and username of the user for [game.js](https://github.com/me50/Tarctic/edit/web50/projects/2020/x/capstone/README.md#js-files) to collect.
+    2. login_view: Collects username and password from POST request and uses authenticate() method to check if the username exists and if the password is correct. If the method returns a User object, the user is redirected to the index page. Otherwise, if it returns None, an error message is shown. If the request is not a POST request, the login page is rendered again.
+    3. logout_view: Logs the user out using logout() method, then redirects the user to the main page.
+    4. register: Collects username, email, password and password confirmation from POST request and then checks if the password confirmation matches the password entered. If it does not, then an error message is shown. If it does, a User object is created and saved. If the the username already exists, the user is notified about the error. Then, a Profile object is created and saved using the previously created User object as foreign key identifier. The user is then logged in and redirected to the main page. If the request is not a POST request, the register page is rendered again.
+    5. save: The Profile object of the current user is retrieved fro the database. If the retrieval fails, then an error message is shown. If the request method received is GET, then the value of the progress variable of the current user's Profile object is sent to the game.js file using JsonResponse() method. 
+
+    If the request method is POST, the progress number sent through fetch request from game.js is collected and saved to the user's Profile object. A HttpResponse indicating success is then returned. 
+
+
+- *models.py*:
+
+    Contains two models:
+    1. User: Uses AbstractUser to create a custom User model instead of the default one.
+    2. Profile: Contains a foreign key attribute pointing to a User object and another attribute that stores a value indicating user progress.
+- *urls.py*:
+
+    Contains the urlpattens list storing five url paths for the main page, logging in, logging out, registering user and saving progress.
+
+#### CSS files:
+- *styles.css*:
+
+    Contains code for styling elements and making them more responsive in html and js files.
+#### HTML files:
+- *layout.html*:
+
+    Template for other html files.
+
+    Contains links for styles.css, bootstrap, react, babel, and fonts along with csrf_token in the head section. 
+
+    In the body section, the basic design of the website is implemented with links to different parts of the website.
+    
+- *index.html*:
+
+    Main page of the website where the code contained in game.js runs.
+- *login.html*:
+
+    Interface for user to login. 
+
+    Contains a form that asks for username and password along with a submit button. A div is placed to display any error. A link to the register page is given at the bottom for those who do not have an account.
+
+- *register.html*:
+
+    Interface for user to register.
+
+    Contains a form that asks for username, email, password and password confirmation along with a submit button. A div is placed to display any error. A link to the login page is given at the bottom for those already have an account.    
 
 
 ### How to run the application:
